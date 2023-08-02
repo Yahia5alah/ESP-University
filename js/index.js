@@ -2,11 +2,14 @@
 // Up Scroll
 const upButton = document.getElementById("up-button");
 function scrollUp(){
-    if(window.scrollY >= 200){
-        upButton.style.display="block";
+    if(window.scrollY >= 100){
+        upButton.style.opacity="1";
+        upButton.style.visibility="visible";
     }
     else{
-        upButton.style.display="none";
+        upButton.style.opacity="0";
+        upButton.style.visibility="hidden";
+        
     }
 }
 function clickUp(){

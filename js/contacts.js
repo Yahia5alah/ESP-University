@@ -1,3 +1,22 @@
+// Up Scroll
+const upButton = document.getElementById("up-button");
+function scrollUp(){
+    if(window.scrollY >= 100){
+        upButton.style.display="block";
+    }
+    else{
+        upButton.style.display="none";
+    }
+}
+function clickUp(){
+    window.scrollTo({
+        left:0,
+        top:0,
+        behavior:"smooth"
+    })
+}
+window.addEventListener('scroll',scrollUp)
+upButton.addEventListener('click',clickUp)
 // Bars Button
 const barsButton = document.getElementById("bars-button");
 const navList= document.querySelector("nav ul")

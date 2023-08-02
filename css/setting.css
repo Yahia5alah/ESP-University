@@ -264,6 +264,7 @@ header .container nav ul li .sub-list ul{
     transition: var(--main-transition) ;
     transition-timing-function:ease;
     opacity: 0;
+    visibility: hidden;
 }
 header .container nav ul li:nth-child(2) .arrow{
     position: absolute;
@@ -384,7 +385,21 @@ opacity: 1;
     height:100%;
 }
 /* End Landing section ******************************/
-
+/* Start Scroll button *****************************/
+.up{
+    text-transform: uppercase;
+    position: fixed;
+    right: 20px;
+    bottom: 30px;
+    transition: var(--main-transition);
+    cursor: pointer;
+    z-index: 10000;
+    display: none;
+}
+.up:hover{
+    opacity: .5;
+}
+/* End Scroll button  *****************************/
 
 /* Start setting ******************************/
 
@@ -451,6 +466,11 @@ justify-content: space-between;
         justify-content: center;
         align-items: center;
         text-align: center;
+    }
+}
+@media (max-width:767px) {
+    .setting .container .content .box{
+        max-width: 250px;
     }
 }
 .setting .container p:first-child{

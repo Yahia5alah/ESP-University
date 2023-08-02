@@ -268,6 +268,7 @@ header .container nav ul li .sub-list ul{
     transition: var(--main-transition) ;
     transition-timing-function:ease;
     opacity: 0;
+    visibility: hidden;
 }
 header .container nav ul li:nth-child(2) .arrow{
     position: absolute;
@@ -388,8 +389,14 @@ opacity: 1;
     transition: var(--main-transition);
     cursor: pointer;
     z-index: 10000;
+    transition: var(--main-transition);
+    opacity: 0;
+    visibility: hidden;
 }
-.up:hover{
+.up img{
+transition: var(--main-transition);
+}
+.up img:hover{
     opacity: .5;
 }
 /* End Scroll button  *****************************/
@@ -625,15 +632,10 @@ max-width: 100%;
 display: flex;
 flex-direction: row;
 justify-content: space-evenly;
-background-color: #444;
-border-top: 50px solid #444;
-border-bottom: 50px solid #444;
 }
 @media (max-width:1200px) {
     .video .container{
     max-width: 960px;
-    border-top: 30px solid #444;
-    border-bottom: 30px solid #444;
     }
 }
 @media (max-width:991px) {
@@ -643,22 +645,22 @@ border-bottom: 50px solid #444;
 }
 @media (max-width:767px) {
     .video .container{
-        max-width: 300px;
+        max-width: 270px;
     }
 }
-@media (max-width:991px) {
+/* @media (max-width:991px) {
     .video .container{
         flex-direction: column-reverse;
     }
-}
-.video .container  .video-area{
+} */
+/* .video .container  .video-area{
 align-self: center;
-}
-.video .container  .video-area video:nth-child(2),
+} */
+/* .video .container  .video-area video:nth-child(2),
 .video .container  .video-area video:nth-child(3),
 .video .container  .video-area video:last-child{
     display: none;
-}
+} */
 
 .video .container   .video-area video{ 
 max-width: 700px;
@@ -675,22 +677,20 @@ max-height: 700px;
 display: flex;
 justify-content: space-around;
 flex-direction: column;
-margin-right: 40px;
 }
-@media (max-width:991px) {
+/* @media (max-width:991px) {
     .video .container .videos {
     align-items: center;
     margin-right: 0;
     }
-}
+} */
 .video .container .videos  video{ 
-max-width: 300px;
+max-width: 270px;
 height: 300px;
 }
 
 .video .container .videos .box{
 padding: 15px 30px;
-background-color: #444;
 letter-spacing: 1px;
 color: white;
 display: flex;
@@ -716,10 +716,13 @@ border: 2px solid #626262;
     }
 }
 .video .container .videos .box:hover  {
-letter-spacing: 3.5px;
+letter-spacing: 2.5px;
 border-color: var(--button-three-color);
 color: var(--button-three-color);
 box-shadow: 0 0 35px var(--button-three-color);
+}
+.video .container .videos .box:first-child:hover{
+letter-spacing: 1.3px;
 }
 .video .container .videos .box:nth-child(2):hover{
 box-shadow: 0 0 35px var(--button-color);

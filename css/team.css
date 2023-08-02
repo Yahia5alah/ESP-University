@@ -264,6 +264,7 @@ header .container nav ul li .sub-list ul{
     transition: var(--main-transition) ;
     transition-timing-function:ease;
     opacity: 0;
+    visibility: hidden;
 }
 header .container nav ul li:nth-child(2) .arrow{
     position: absolute;
@@ -385,7 +386,21 @@ opacity: 1;
 }
 /* End Landing section ******************************/
 
-
+/* Start Scroll button *****************************/
+.up{
+    text-transform: uppercase;
+    position: fixed;
+    right: 20px;
+    bottom: 30px;
+    transition: var(--main-transition);
+    cursor: pointer;
+    z-index: 10000;
+    display: none;
+}
+.up:hover{
+    opacity: .5;
+}
+/* End Scroll button  *****************************/
 /* Start Team ******************************/
 
 .team{
@@ -436,6 +451,9 @@ gap: 10px;
     grid-template-columns: repeat(auto-fill , minmax(350px , 1fr));
 
     }
+    .team .container > p {
+            text-align: center;
+        } 
 }
 .team .container .content .box  {
 text-align: center;
@@ -444,7 +462,12 @@ background-color: #fff;
 color: var(--main-title-color);
 display: flex;
 }   
+@media (max-width:350px) {
+    .team .container .content .box  {
 
+max-width: 250px;
+}
+}
 .team .container .content .box:nth-child(3),
 .team .container .content .box:last-child{
 margin-bottom: 40px;

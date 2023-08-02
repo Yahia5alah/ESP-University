@@ -264,6 +264,7 @@ header .container nav ul li .sub-list ul{
     transition: var(--main-transition) ;
     transition-timing-function:ease;
     opacity: 0;
+    visibility: hidden;
 }
 header .container nav ul li:nth-child(2) .arrow{
     position: absolute;
@@ -384,7 +385,21 @@ opacity: 1;
     height:100%;
 }
 /* End Landing section ******************************/
-
+/* Start Scroll button *****************************/
+.up{
+    text-transform: uppercase;
+    position: fixed;
+    right: 20px;
+    bottom: 30px;
+    transition: var(--main-transition);
+    cursor: pointer;
+    z-index: 10000;
+    display: none;
+}
+.up:hover{
+    opacity: .5;
+}
+/* End Scroll button  *****************************/
 /*Start A few words about us ******************************/
 .about-us{
     padding-top: var(--main-paddidng);
@@ -430,6 +445,11 @@ text-align: center;
 font-family: "Autour One", cursive;
 background-color: #fff;
 border-bottom: 30px solid #fff;
+}
+@media (max-width:767px) {
+    .about-us  .container .content .box{
+        max-width: 250px;
+    }
 }
 .about-us .container .content .box:not(:first-child){
     padding-left: 15px;
@@ -561,6 +581,7 @@ text-align: center;
 font-family: "Autour One", cursive;
 background-color: #fff;
 border-bottom: 30px solid #fff;
+
 }
 .teachers .container .content .box:not(:first-child){
 padding-left: 15px;

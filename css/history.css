@@ -264,6 +264,7 @@ header .container nav ul li .sub-list ul{
     transition: var(--main-transition) ;
     transition-timing-function:ease;
     opacity: 0;
+    visibility: hidden;
 }
 header .container nav ul li:nth-child(2) .arrow{
     position: absolute;
@@ -385,7 +386,23 @@ opacity: 1;
 }
 /* End Landing section ******************************/
 
+/* Start Scroll button *****************************/
+.up{
+    text-transform: uppercase;
+    position: fixed;
+    right: 20px;
+    bottom: 30px;
+    transition: var(--main-transition);
+    cursor: pointer;
+    z-index: 10000;
+    display: none;
+}
+.up:hover{
+    opacity: .5;
+}
+/* End Scroll button  *****************************/
 
+/* Start Landing section ******************************/
 /* Start history ******************************/
 
 .history{
@@ -434,7 +451,11 @@ font-family: "Autour One", cursive;
 background-color: #fff;
 color: var(--main-title-color);
 }
-
+@media (max-width:767px) {
+    .history .container .content .box{
+        max-width: 250px;
+    }
+}
 .history .container .content .box > h3{
 color:var(--main-title-color);
 margin-bottom:30px;
